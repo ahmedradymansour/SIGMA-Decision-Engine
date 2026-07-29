@@ -1,0 +1,1 @@
+from django.contrib import admin\nfrom .models import ExecutionGate\n\n@admin.register(ExecutionGate)\nclass ExecutionGateAdmin(admin.ModelAdmin):\n    list_display = ('symbol', 'timeframe', 'result', 'percentage', 'timestamp')\n    list_filter = ('result', 'symbol', 'timeframe', 'timestamp')\n    search_fields = ('symbol',)\n    ordering = ('-timestamp',)\n
