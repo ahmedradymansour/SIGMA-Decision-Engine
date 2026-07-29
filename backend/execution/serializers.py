@@ -1,0 +1,1 @@
+from rest_framework import serializers\nfrom .models import ExecutionGate\n\nclass ExecutionGateSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ExecutionGate\n        fields = '__all__'\n        read_only_fields = ('timestamp',)\n
